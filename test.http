@@ -1,0 +1,35 @@
+### all users
+GET http://localhost:8080/users
+
+### all reviews
+GET http://localhost:8080/reviews
+
+### all products
+GET http://localhost:8080/products
+
+### all categories
+GET http://localhost:8080/categories
+
+### all address
+GET http://localhost:8080/addresses
+
+### all activities
+GET http://localhost:8080/activities
+
+### all reviews by price greater than
+GET http://localhost:8080/products/min-price?price=100
+
+### all reviews by category and price less than
+POST http://localhost:8080/products/category-and-max-price?price=1600
+content-type: application/json
+
+{
+  "id": 1,
+  "name": "Electronics"
+}
+
+### all reviews by price greater than
+GET http://localhost:8080/products/keyword/Macbook%20Pro
+
+### all reviews by product
+GET http://localhost:8080/products/1/reviews
