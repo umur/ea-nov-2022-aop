@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "9f1a3b89-f44a-43d1-97e9-2ed14c89e291",
+		"name": "CS544 Lab 03",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{host}}/users"
+			},
+			"response": []
+		},
+		{
+			"name": "get all address",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{host}}/addresses"
+			},
+			"response": []
+		},
+		{
+			"name": "get all categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{host}}/categories"
+			},
+			"response": []
+		},
+		{
+			"name": "get all products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{host}}/products"
+			},
+			"response": []
+		},
+		{
+			"name": "get all reviews",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{host}}/reviews"
+			},
+			"response": []
+		},
+		{
+			"name": "get all activities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{host}}/activities"
+			},
+			"response": []
+		},
+		{
+			"name": "get all reviews by product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{host}}/products/1/reviews"
+			},
+			"response": []
+		},
+		{
+			"name": "get all products by price greater than",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/products/min-price?price=100",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"products",
+						"min-price"
+					],
+					"query": [
+						{
+							"key": "price",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all products by category and price less than",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 1,\n  \"name\": \"Electronics\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/products/category-and-max-price?price=1500",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"products",
+						"category-and-max-price"
+					],
+					"query": [
+						{
+							"key": "price",
+							"value": "1500"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all products by price greater than Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{host}}/products/keyword/Macbook"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:8080",
+			"type": "default"
+		}
+	]
+}
