@@ -3,6 +3,7 @@ package edu.miu.aop.aop.service;
 import edu.miu.aop.aop.dto.RequestCategoryDTO;
 import edu.miu.aop.aop.entity.Category;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -11,7 +12,7 @@ import java.util.List;
  */
 public interface CategoryService {
 
-    RequestCategoryDTO save(RequestCategoryDTO category);
+    RequestCategoryDTO save(HttpServletRequest request, RequestCategoryDTO category);
 
     RequestCategoryDTO update(Long id, RequestCategoryDTO category);
 

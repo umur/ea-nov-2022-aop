@@ -3,6 +3,7 @@ package edu.miu.aop.aop.service;
 import edu.miu.aop.aop.dto.RequestReviewDTO;
 import edu.miu.aop.aop.entity.Review;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -11,7 +12,7 @@ import java.util.List;
  */
 public interface ReviewService {
 
-    RequestReviewDTO save(RequestReviewDTO review);
+    RequestReviewDTO save(HttpServletRequest request, RequestReviewDTO review);
 
     RequestReviewDTO update(Long id, RequestReviewDTO review);
 

@@ -6,6 +6,7 @@ import edu.miu.aop.aop.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -20,8 +21,8 @@ public class UserController {
     private final UserService service;
 
     @PostMapping
-    public RequestUserDTO createUser(@RequestBody RequestUserDTO dto) {
-        return service.save(dto);
+    public RequestUserDTO createUser(HttpServletRequest request, @RequestBody RequestUserDTO dto) {
+        return service.save(request, dto);
     }
 
     @PutMapping("/{id}")

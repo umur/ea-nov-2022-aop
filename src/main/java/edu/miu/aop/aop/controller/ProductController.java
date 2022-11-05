@@ -6,6 +6,7 @@ import edu.miu.aop.aop.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -20,8 +21,8 @@ public class ProductController {
     private final ProductService service;
 
     @PostMapping
-    public RequestProductDTO createProduct(@RequestBody RequestProductDTO dto) {
-        return service.save(dto);
+    public RequestProductDTO createProduct(HttpServletRequest request, @RequestBody RequestProductDTO dto) {
+        return service.save(request, dto);
     }
 
     @PutMapping("/{id}")

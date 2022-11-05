@@ -6,6 +6,7 @@ import edu.miu.aop.aop.service.AddressService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -20,8 +21,8 @@ public class AddressController {
     private final AddressService service;
 
     @PostMapping
-    public RequestAddressDTO createAddress(@RequestBody RequestAddressDTO address) {
-        return service.save(address);
+    public RequestAddressDTO createAddress(HttpServletRequest request, @RequestBody RequestAddressDTO address) {
+        return service.save(request ,address);
     }
 
     @PutMapping("/{id}")

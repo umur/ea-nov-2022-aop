@@ -3,6 +3,7 @@ package edu.miu.aop.aop.service;
 import edu.miu.aop.aop.dto.RequestUserDTO;
 import edu.miu.aop.aop.entity.User;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -11,7 +12,7 @@ import java.util.List;
  */
 public interface UserService {
 
-    RequestUserDTO save(RequestUserDTO user);
+    RequestUserDTO save(HttpServletRequest request, RequestUserDTO user);
 
     RequestUserDTO update(Long id, RequestUserDTO user);
 

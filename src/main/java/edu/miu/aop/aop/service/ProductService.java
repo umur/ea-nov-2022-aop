@@ -3,6 +3,7 @@ package edu.miu.aop.aop.service;
 import edu.miu.aop.aop.dto.RequestProductDTO;
 import edu.miu.aop.aop.entity.Product;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -11,7 +12,7 @@ import java.util.List;
  */
 public interface ProductService {
 
-    RequestProductDTO save(RequestProductDTO product);
+    RequestProductDTO save(HttpServletRequest request, RequestProductDTO product);
 
     RequestProductDTO update(Long id, RequestProductDTO product);
 

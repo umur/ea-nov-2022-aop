@@ -3,6 +3,7 @@ package edu.miu.aop.aop.service;
 import edu.miu.aop.aop.dto.RequestAddressDTO;
 import edu.miu.aop.aop.entity.Address;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -11,7 +12,7 @@ import java.util.List;
  */
 public interface AddressService {
 
-    RequestAddressDTO save(RequestAddressDTO address);
+    RequestAddressDTO save(HttpServletRequest request, RequestAddressDTO address);
 
     RequestAddressDTO update(Long id, RequestAddressDTO address);
 

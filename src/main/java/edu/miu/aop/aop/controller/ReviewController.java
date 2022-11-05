@@ -6,6 +6,7 @@ import edu.miu.aop.aop.service.ReviewService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -20,8 +21,8 @@ public class ReviewController {
     private final ReviewService service;
 
     @PostMapping
-    public RequestReviewDTO createReview(@RequestBody RequestReviewDTO dto) {
-        return service.save(dto);
+    public RequestReviewDTO createReview(HttpServletRequest request, @RequestBody RequestReviewDTO dto) {
+        return service.save(request, dto);
     }
 
     @PutMapping("/{id}")

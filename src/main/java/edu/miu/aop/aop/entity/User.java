@@ -13,7 +13,7 @@ import java.util.List;
  */
 @Setter
 @Getter
-@Entity(name = "user")
+@Entity(name = "tb_user")
 public class User {
 
     @Id

@@ -6,6 +6,7 @@ import edu.miu.aop.aop.service.CategoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -20,8 +21,8 @@ public class CategoryController {
     private final CategoryService service;
 
     @PostMapping
-    public RequestCategoryDTO createCategory(@RequestBody RequestCategoryDTO dto) {
-        return service.save(dto);
+    public RequestCategoryDTO createCategory(HttpServletRequest request, @RequestBody RequestCategoryDTO dto) {
+        return service.save(request, dto);
     }
 
     @PutMapping("/{id}")

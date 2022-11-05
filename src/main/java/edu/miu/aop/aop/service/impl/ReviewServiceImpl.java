@@ -1,5 +1,7 @@
 package edu.miu.aop.aop.service.impl;
 
+import edu.miu.aop.aop.aspect.annotation.ExecutionTime;
+import edu.miu.aop.aop.aspect.annotation.ValidatePostMethod;
 import edu.miu.aop.aop.dto.RequestReviewDTO;
 import edu.miu.aop.aop.entity.Review;
 import edu.miu.aop.aop.repository.ProductRepository;
@@ -10,6 +12,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,7 +29,9 @@ public class ReviewServiceImpl implements ReviewService {
     private final ProductRepository productRepository;
 
     @Override
-    public RequestReviewDTO save(RequestReviewDTO review) {
+    @ExecutionTime
+    @ValidatePostMethod
+    public RequestReviewDTO save(HttpServletRequest request, RequestReviewDTO review) {
 
         Review r = new Review();
         BeanUtils.copyProperties(review, r, "id");
@@ -38,6 +43,7 @@ public class ReviewServiceImpl implements ReviewService {
     }
 
     @Override
+    @ExecutionTime
     public RequestReviewDTO update(Long id, RequestReviewDTO review) {
         Optional<Review> optional = repository.findById(id);
         if (optional.isEmpty()) {
@@ -53,11 +59,13 @@ public class ReviewServiceImpl implements ReviewService {
     }
 
     @Override
+    @ExecutionTime
     public List<Review> getAllReview() {
         return repository.findAll();
     }
 
     @Override
+    @ExecutionTime
     public List<Review> getAllReviewByProduct(Long productId) {
         return repository.findAllByProductId(productId);
     }

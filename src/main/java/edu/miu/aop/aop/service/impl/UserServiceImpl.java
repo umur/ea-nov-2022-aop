@@ -1,5 +1,7 @@
 package edu.miu.aop.aop.service.impl;
 
+import edu.miu.aop.aop.aspect.annotation.ExecutionTime;
+import edu.miu.aop.aop.aspect.annotation.ValidatePostMethod;
 import edu.miu.aop.aop.dto.RequestUserDTO;
 import edu.miu.aop.aop.entity.User;
 import edu.miu.aop.aop.repository.AddressRepository;
@@ -9,6 +11,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,7 +27,9 @@ public class UserServiceImpl implements UserService {
     private final AddressRepository addressRepository;
 
     @Override
-    public RequestUserDTO save(RequestUserDTO user) {
+    @ExecutionTime
+    @ValidatePostMethod
+    public RequestUserDTO save(HttpServletRequest request, RequestUserDTO user) {
         User u = new User();
         BeanUtils.copyProperties(user, u, "id");
         u.setAddress(addressRepository.findById(user.getAddressId()).get());
@@ -33,6 +38,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @ExecutionTime
     public RequestUserDTO update(Long id, RequestUserDTO user) {
         Optional<User> optional = repository.findById(id);
         if(optional.isEmpty()) {
@@ -46,11 +52,13 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @ExecutionTime
     public List<User> getAllUser() {
         return repository.findAll();
     }
 
     @Override
+    @ExecutionTime
     public Boolean deleteUser(Long id) {
         repository.deleteById(id);
         return true;
