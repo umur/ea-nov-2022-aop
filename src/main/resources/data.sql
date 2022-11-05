@@ -1,0 +1,1 @@
+INSERT INTO users  (name, email, address)  VALUES ('John Doe', 'john@doe.com', '1000 N 4th St. Fairfield');
