@@ -1,4 +1,4 @@
-package com.example.lab3springdata.service;
+package com.example.lab3springdata.aspect;
 
 import com.example.lab3springdata.model.ActivityLog;
 import com.example.lab3springdata.repository.ActivityLogRepo;
@@ -20,7 +20,7 @@ public class ActivityLogAspect {
         this.activityLogRepo = activityLogRepo;
     }
 
-    @Pointcut("@annotation(com.example.lab3springdata.annotations.ExecutionTime)")
+    @Pointcut("@annotation(com.example.lab3springdata.aspect.annotations.ExecutionTime)")
     public void a(){}
 
     @Around("a()")

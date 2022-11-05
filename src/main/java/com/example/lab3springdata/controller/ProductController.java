@@ -1,6 +1,6 @@
 package com.example.lab3springdata.controller;
 
-import com.example.lab3springdata.annotations.ExecutionTime;
+import com.example.lab3springdata.aspect.annotations.ExecutionTime;
 import com.example.lab3springdata.model.dto.ProductDTO;
 import com.example.lab3springdata.service.IProductService;
 import org.springframework.web.bind.annotation.*;

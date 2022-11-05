@@ -1,4 +1,4 @@
-package com.example.lab3springdata.service;
+package com.example.lab3springdata.aspect;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -17,10 +17,10 @@ public class PostHeaderCheckAspect {
     }
 
     @Pointcut("within(com.example.lab3springdata.service.*)")
-    public void a(){}
+    public void serviceMethods(){}
 
-    @Before("a()")
-    public void logActivity() throws AopIsAwesomeHeaderException{
+    @Before("serviceMethods()")
+    public void checkHeader() throws AopIsAwesomeHeaderException {
         if (!request.getMethod().equals("POST")){
             return;
         }
