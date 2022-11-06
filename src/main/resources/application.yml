@@ -1,0 +1,39 @@
+
+spring:
+  application:
+    name: SpringDataAop
+
+  datasource:
+    username: postgres
+    password: root
+    url: jdbc:postgresql://localhost:5432/SpringAop
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    defer-datasource-initialization: true
+
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+
+
+  sql:
+    init:
+      mode: always
+
+
+  main:
+    allow-bean-definition-overriding: true
+
+  #  web:
+  #    resources:
+  #      static-locations: classpath:/resources/images
+
+
+  server:
+    port: 8080
+
+
