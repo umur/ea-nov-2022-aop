@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.example.ea-nov-2022-spring-data-I' is invalid and this project uses 'com.example.eanov2022springdataI' instead.
+* The original package name 'com.example.ea-nov-2022-spring-data-I' is invalid and this project uses 'com.example.eanov2022aop' instead.
 
 # Getting Started
 
