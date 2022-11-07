@@ -1,0 +1,651 @@
+{
+	"info": {
+		"_postman_id": "2ac597bd-2f58-4706-9750-3291f9c9aee6",
+		"name": "Spring Data",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ActivityLog.GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/springdata/admin/activitylogs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"springdata",
+						"admin",
+						"activitylogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category.GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/springdata/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"springdata",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category.FilterProductByCategoryAndPriceLessThanMaxPrice",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Sports\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/springdata/category/filterProductByCategoryAndPriceLessThanMaxPrice?maxPrice=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"springdata",
+						"category",
+						"filterProductByCategoryAndPriceLessThanMaxPrice"
+					],
+					"query": [
+						{
+							"key": "maxPrice",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category.Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "AOP-IS-AWESOME",
+						"value": "Yes",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Kosmatics\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/springdata/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"springdata",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category.Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 5,\r\n    \"name\": \"Cosmetics\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/springdata/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"springdata",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category.Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/springdata/category/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"springdata",
+						"category",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User.GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/springdata/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"springdata",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User.Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"avaya.rawal@miu.edu\",\r\n    \"password\": \"Ava123\",\r\n    \"firstName\": \"Avaya\",\r\n    \"lastName\": \"Rawal\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/springdata/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"springdata",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User.Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 5,\r\n    \"email\": \"abhay.rawal@miu.edu\",\r\n    \"password\": \"Abh123\",\r\n    \"firstName\": \"Abhay\",\r\n    \"lastName\": \"Rawal\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/springdata/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"springdata",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User.Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/springdata/user/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"springdata",
+						"user",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Address.GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/springdata/address",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"springdata",
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Address.Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"street\": \"233 S 2nd St\",\r\n    \"zip\": \"52557\",\r\n    \"city\": \"Fairfield\",\r\n    \"user\": {\r\n        \"id\": 5,\r\n        \"email\": \"abhay.rawal@miu.edu\",\r\n        \"password\": \"Abh123\",\r\n        \"firstName\": \"Abhay\",\r\n        \"lastName\": \"Rawal\",\r\n        \"reviews\": []\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/springdata/address",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"springdata",
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Address.Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 5,\r\n    \"street\": \"301 S Main St\",\r\n    \"zip\": \"52557\",\r\n    \"city\": \"Fairfield\",\r\n    \"user\": {\r\n        \"id\": 5,\r\n        \"email\": \"abhay.rawal@miu.edu\",\r\n        \"password\": \"Abh123\",\r\n        \"firstName\": \"Abhay\",\r\n        \"lastName\": \"Rawal\",\r\n        \"reviews\": []\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/springdata/address",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"springdata",
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Address.Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/springdata/address/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"springdata",
+						"address",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product.GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/springdata/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"springdata",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product.FilterByPriceGreaterThanMinPrice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/springdata/product/filterByPriceGreaterThanMinPrice?minPrice=50",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"springdata",
+						"product",
+						"filterByPriceGreaterThanMinPrice"
+					],
+					"query": [
+						{
+							"key": "minPrice",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product.FilterByNameContaining",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/springdata/product/filterByNameContaining?name=Planters Mixed Nuts 500gm",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"springdata",
+						"product",
+						"filterByNameContaining"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Planters Mixed Nuts 500gm"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product.FilterReviewByProductId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/springdata/product/filterReviewByProductId?productId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"springdata",
+						"product",
+						"filterReviewByProductId"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product.Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Aveeno Daily Moisturizer 530ml\",\r\n    \"price\": 12.0,\r\n    \"rating\": 7.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/springdata/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"springdata",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product.Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 5,\r\n    \"name\": \"Aveeno Daily Moisturizer 550ml\",\r\n    \"price\": 10.5,\r\n    \"rating\": 7.0,\r\n    \"reviews\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/springdata/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"springdata",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product.Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/springdata/product/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"springdata",
+						"product",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Review.GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/springdata/review",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"springdata",
+						"review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Review.Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"comment\": \"Poor quality and over priced\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/springdata/review",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"springdata",
+						"review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Review.Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 5,\r\n    \"comment\": \"Poor quality though not expensive\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/springdata/review",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"springdata",
+						"review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Review.Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/springdata/review/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"springdata",
+						"review",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
