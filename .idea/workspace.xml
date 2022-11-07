@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ba24920f-65fd-4a04-bd15-84c868dc7f33" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/spring-data/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/SpringDataApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/aspect/CheckPostHeaderRequestAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/aspect/ExecutionTimeAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/aspect/annotation/ExecutionTime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/controller/ActivityLogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/controller/AddressController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/controller/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/controller/ReviewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/entity/ActivityLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/entity/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/entity/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/entity/Review.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/exceptions/AopIsAwesomeHeaderException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/repository/ActivityLogRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/repository/AddressRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/repository/CategoryRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/repository/ProductRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/repository/ReviewRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/repository/UserRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/service/ActivityLogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/service/AddressService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/service/ReviewService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/service/impl/ActivityLogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/service/impl/AddressServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/service/impl/ReviewServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/java/edu/miu/springdata/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/main/resources/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-data/src/test/java/edu/miu/springdata/SpringDataApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2HD0EURVI7NHgJZwZCmgmUkTV9b" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "F:/1. MIU - Study/intellij-workspace/ea-nov-2022-aop",
+    "nodejs_package_manager_path": "npm"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="SpringDataApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-data" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="edu.miu.springdata.SpringDataApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ba24920f-65fd-4a04-bd15-84c868dc7f33" name="Changes" comment="" />
+      <created>1667804235118</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1667804235118</updated>
+      <workItem from="1667804236788" duration="51000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
