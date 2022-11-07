@@ -1,6 +1,6 @@
 package com.example.Product.Review.service;
 
-import com.example.Product.Review.entities.join_column.User;
+import com.example.Product.Review.entities.User;
 
 import java.util.List;
 

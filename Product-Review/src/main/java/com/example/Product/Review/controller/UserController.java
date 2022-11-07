@@ -1,6 +1,6 @@
 package com.example.Product.Review.controller;
 
-import com.example.Product.Review.entities.join_column.User;
+import com.example.Product.Review.entities.User;
 import com.example.Product.Review.service.IUserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

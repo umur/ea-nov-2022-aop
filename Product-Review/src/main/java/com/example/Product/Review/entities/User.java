@@ -1,4 +1,4 @@
-package com.example.Product.Review.entities.bi_directional;
+package com.example.Product.Review.entities;
 
 import lombok.Data;
 
@@ -7,7 +7,8 @@ import java.util.List;
 
 @Entity
 @Data
-public class BiUser {
+@Table(name = "users")
+public class User {
 
     @Id
     private long id;
@@ -17,8 +18,8 @@ public class BiUser {
     private String lastName;
 
     @OneToMany(mappedBy = "user")
-    private List<BiReview> reviews;
+    private List<Review> reviews;
 
     @OneToOne(mappedBy = "user")
-    private BiAddress address;
+    private Address address;
 }

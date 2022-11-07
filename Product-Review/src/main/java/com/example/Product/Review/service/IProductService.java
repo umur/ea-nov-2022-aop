@@ -1,9 +1,8 @@
 package com.example.Product.Review.service;
 
-import com.example.Product.Review.entities.join_column.Category;
-import com.example.Product.Review.entities.join_column.Product;
+import com.example.Product.Review.entities.Category;
+import com.example.Product.Review.entities.Product;
 
-import javax.sound.sampled.Port;
 import java.util.List;
 
 public interface IProductService {

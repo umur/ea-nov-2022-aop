@@ -1,4 +1,4 @@
-package com.example.Product.Review.entities.uni_directional;
+package com.example.Product.Review.entities;
 
 import lombok.Data;
 
@@ -7,7 +7,7 @@ import java.util.List;
 
 @Entity
 @Data
-public class UniProduct {
+public class Product {
 
     @Id
     private long id;
@@ -16,9 +16,8 @@ public class UniProduct {
     private short rating;
 
     @ManyToOne
-    private UniCategory category;
+    private Category category;
 
-    @OneToMany
-    @JoinColumn(name = "product_id")
-    private List<UniReview> reviews;
+    @OneToMany(mappedBy = "product")
+    private List<Review> reviews;
 }

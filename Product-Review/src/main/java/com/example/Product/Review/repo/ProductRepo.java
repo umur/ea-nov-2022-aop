@@ -1,7 +1,7 @@
 package com.example.Product.Review.repo;
 
-import com.example.Product.Review.entities.join_column.Category;
-import com.example.Product.Review.entities.join_column.Product;
+import com.example.Product.Review.entities.Category;
+import com.example.Product.Review.entities.Product;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

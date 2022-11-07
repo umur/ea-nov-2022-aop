@@ -1,6 +1,6 @@
 package com.example.Product.Review.service.impl;
 
-import com.example.Product.Review.entities.join_column.Category;
+import com.example.Product.Review.entities.Category;
 import com.example.Product.Review.repo.CategoryRepo;
 import com.example.Product.Review.service.ICategoryService;
 import lombok.RequiredArgsConstructor;

@@ -1,6 +1,6 @@
 package com.example.Product.Review.service.impl;
 
-import com.example.Product.Review.entities.join_column.Address;
+import com.example.Product.Review.entities.Address;
 import com.example.Product.Review.repo.AddressRepo;
 import com.example.Product.Review.service.IAddressService;
 import lombok.RequiredArgsConstructor;

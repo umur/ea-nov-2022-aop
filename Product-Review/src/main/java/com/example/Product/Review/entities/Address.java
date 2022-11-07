@@ -1,4 +1,4 @@
-package com.example.Product.Review.entities.bi_directional;
+package com.example.Product.Review.entities;
 
 import lombok.Data;
 
@@ -8,7 +8,7 @@ import javax.persistence.OneToOne;
 
 @Entity
 @Data
-public class BiAddress {
+public class Address {
 
     @Id
     private long id;
@@ -17,5 +17,5 @@ public class BiAddress {
     private String city;
 
     @OneToOne
-    private BiUser user;
+    private User user;
 }

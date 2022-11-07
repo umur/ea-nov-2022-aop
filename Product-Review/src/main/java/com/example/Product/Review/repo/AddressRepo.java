@@ -1,6 +1,6 @@
 package com.example.Product.Review.repo;
 
-import com.example.Product.Review.entities.join_column.Address;
+import com.example.Product.Review.entities.Address;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
