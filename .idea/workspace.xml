@@ -7,7 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86bee20a-59b1-4358-ae19-214c6d1f604d" name="Changes" comment="Update commit for untracked files" />
+    <list default="true" id="86bee20a-59b1-4358-ae19-214c6d1f604d" name="Changes" comment="Update commit for untracked files">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +25,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/SpringAOP" />
   </component>
   <component name="JpbToolWindowState">
@@ -86,6 +94,11 @@
       <recent name="C:\EA\Assignments\W1D5\ea-nov-2022-aop\SpringAOP\src\main\java\com\aop\springaop" />
     </key>
   </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="SpringAopApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="SpringAOP" />
@@ -104,7 +117,7 @@
       <option name="presentableId" value="Default" />
       <updated>1667587201769</updated>
       <workItem from="1667587203872" duration="3432000" />
-      <workItem from="1667623041944" duration="20420000" />
+      <workItem from="1667623041944" duration="23166000" />
     </task>
     <task id="LOCAL-00001" summary="Update commit for untracked files">
       <created>1667721662370</created>
@@ -138,7 +151,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
