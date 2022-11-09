@@ -6,7 +6,7 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Data
-@Entity
+//@Entity
 @Table(name = "bi_address")
 public class Address {
 

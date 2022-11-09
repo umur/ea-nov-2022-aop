@@ -5,6 +5,7 @@ import com.example.lab3springdata.model.uni_directional.Category;
 import com.example.lab3springdata.repo.CategoryRepository;
 import com.example.lab3springdata.repo.ProductRepository;
 import com.example.lab3springdata.repo.ReviewRepository;
+import org.modelmapper.ModelMapper;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
@@ -20,7 +21,6 @@ public class UniConfig {
     private final ProductRepository productRepository;
 
     private final ReviewRepository reviewRepository;
-
 
     public UniConfig(CategoryRepository categoryRepository, ProductRepository productRepository, ReviewRepository reviewRepository) {
         this.categoryRepository = categoryRepository;
@@ -68,7 +68,7 @@ public class UniConfig {
             productRepository.findAllByNameContaining("bat").forEach(System.out::println);
 
             // case 4 testing
-            reviewRepository.findAllByProduct_Id(4).forEach(System.out::println);
+//            reviewRepository.findAllByProduct_Id(4).forEach(System.out::println);
 
 
 

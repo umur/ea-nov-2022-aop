@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Data
-@Entity
+//@Entity
 @Table(name = "bi_users")
 public class User {
     @Id
