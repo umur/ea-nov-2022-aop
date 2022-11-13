@@ -22,15 +22,16 @@ public interface ReviewService {
 
     /**
      * Update a Review
+     * @param id
      * @param review
      */
-    void updateReview(ReviewDto review);
+    void updateReview(int id, ReviewDto review);
 
     /**
      * Add a Review
      * @param review
      */
-    void addReview(ReviewDto review);
+    ReviewDto addReview(ReviewDto review);
 
     /**
      * Remove a Review by id

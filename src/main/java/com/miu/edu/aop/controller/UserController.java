@@ -1,5 +1,6 @@
 package com.miu.edu.aop.controller;
 
+import com.miu.edu.aop.dto.AddressDto;
 import com.miu.edu.aop.dto.UserDto;
 import com.miu.edu.aop.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,14 +25,18 @@ public class UserController {
         return userService.getUserById(id);
     }
 
-    @PutMapping
-    public void updateUser(@RequestBody UserDto user) {
+    @GetMapping("/{id}/address")
+    public AddressDto getAddressByUserId(@PathVariable int id) {
+        return userService.getAddressByUserId(id);
+    }
+    @PutMapping("/{id}")
+    public void updateUser(@PathVariable int id, @RequestBody UserDto user) {
         userService.updateUser(user);
     }
 
     @PostMapping
-    public void addUser(@RequestBody UserDto user) {
-        userService.addUser(user);
+    public UserDto addUser(@RequestBody UserDto user) {
+        return userService.addUser(user);
     }
 
     @DeleteMapping("/{id}")

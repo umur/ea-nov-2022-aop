@@ -1,5 +1,6 @@
 package com.miu.edu.aop.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.miu.edu.aop.entity.Address;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,6 +19,8 @@ public class AddressDto {
 
     private String city;
 
+    @JsonIgnore
+    private UserDto userDto;
     public static AddressDto convertFrom(Address address) {
         if (address == null) {
             return null;
@@ -26,7 +29,8 @@ public class AddressDto {
                 address.getId(),
                 address.getStreet(),
                 address.getZip(),
-                address.getCity()
+                address.getCity(),
+                null
         );
     }
 
@@ -39,7 +43,7 @@ public class AddressDto {
                 address.getStreet(),
                 address.getZip(),
                 address.getCity(),
-                null
+                UserDto.convertTo(address.getUserDto())
         );
     }
 }

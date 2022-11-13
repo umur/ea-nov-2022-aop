@@ -27,7 +27,11 @@ public class ProductController {
     }
 
     @GetMapping("/filter")
-    public List<ProductDto> findProductsByPriceGreaterThanEqual(@RequestParam("min-price") Double minPrice) {
+    public List<ProductDto> findProductsByPriceGreaterThanEqualAndNameContaining(@RequestParam(value = "min-price", defaultValue = "0") Double minPrice,
+                                                                @RequestParam(value = "name", required = false, defaultValue = "") String name) {
+        if (!name.isBlank()) {
+            return productService.findProductByPriceGreaterThanEqualAndNameContainingIgnoreCase(minPrice, name);
+        }
         return productService.findProductsByPriceGreaterThanEqual(minPrice);
     }
 
@@ -44,14 +48,14 @@ public class ProductController {
         return productService.getProductById(id);
     }
 
-    @PutMapping
-    public void updateProduct(@RequestBody ProductDto product) {
-        productService.updateProduct(product);
+    @PutMapping("/{id}")
+    public void updateProduct(@PathVariable int id, @RequestBody ProductDto product) {
+        productService.updateProduct(id, product);
     }
 
     @PostMapping
-    public void addProduct(@RequestBody ProductDto product) {
-        productService.addProduct(product);
+    public ProductDto addProduct(@RequestBody ProductDto product) {
+        return productService.addProduct(product);
     }
 
     @DeleteMapping("/{id}")

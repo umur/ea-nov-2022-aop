@@ -1,5 +1,6 @@
 package com.miu.edu.aop.dto;
 
+import com.miu.edu.aop.entity.Address;
 import com.miu.edu.aop.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -45,18 +46,24 @@ public class UserDto {
         );
     }
 
-    public static User convertTo(UserDto user) {
-        if (user == null) {
+    public static User convertTo(UserDto userDto) {
+        if (userDto == null) {
             return null;
         }
-        return new User(
-                user.getId(),
-                user.getEmail(),
-                user.getPassword(),
-                user.getFirstName(),
-                user.getLastname(),
-                AddressDto.convertTo(user.getAddress()),
+        User user =  new User(
+                userDto.getId(),
+                userDto.getEmail(),
+                userDto.getPassword(),
+                userDto.getFirstName(),
+                userDto.getLastname(),
+                null,
                 new ArrayList<>()
         );
+
+        Address address = AddressDto.convertTo(userDto.getAddress());
+        address.setUser(user);
+
+        user.setAddress(address);
+        return user;
     }
 }

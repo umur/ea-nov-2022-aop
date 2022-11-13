@@ -16,15 +16,14 @@ public class CategoryController {
     public CategoryDto getCategoryById(@PathVariable int id) {
         return categoryService.getCategoryById(id);
     }
-
-    @PutMapping
-    public void updateCategory(@RequestBody CategoryDto student) {
-        categoryService.updateCategory(student);
+    @PutMapping("/{id}")
+    public void updateCategory(@PathVariable int id, @RequestBody CategoryDto student) {
+        categoryService.updateCategory(id, student);
     }
 
     @PostMapping
-    public void addCategory(@RequestBody CategoryDto student) {
-        categoryService.addCategory(student);
+    public CategoryDto addCategory(@RequestBody CategoryDto student) {
+        return categoryService.addCategory(student);
     }
 
     @DeleteMapping("/{id}")

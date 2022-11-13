@@ -1,6 +1,7 @@
 package com.miu.edu.aop.service;
 
 
+import com.miu.edu.aop.dto.AddressDto;
 import com.miu.edu.aop.dto.UserDto;
 
 import java.util.List;
@@ -22,6 +23,13 @@ public interface UserService {
     UserDto getUserById(int id);
 
     /**
+     * Get Address by user id
+     * @param id
+     * @return AddressDto
+     */
+    AddressDto getAddressByUserId(int id);
+
+    /**
      * Update a User
      * @param user
      */
@@ -31,7 +39,7 @@ public interface UserService {
      * Add a User
      * @param user
      */
-    void addUser(UserDto user);
+    UserDto addUser(UserDto user);
 
     /**
      * Remove a User by id

@@ -2,6 +2,7 @@ package com.miu.edu.aop.service.impl;
 
 import com.miu.edu.aop.annotation.ExecutionTime;
 import com.miu.edu.aop.dto.ReviewDto;
+import com.miu.edu.aop.entity.Review;
 import com.miu.edu.aop.repository.ReviewRepository;
 import com.miu.edu.aop.service.ReviewService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,16 +29,16 @@ public class ReviewServiceImpl implements ReviewService {
     }
 
     @Override
-    public void updateReview(ReviewDto review) {
-        reviewRepository.findById(review.getId()).ifPresent(r -> {
+    public void updateReview(int id, ReviewDto review) {
+        reviewRepository.findById(id).ifPresent(r -> {
             r.setComment(review.getComment());
             reviewRepository.save(r);
         });
     }
 
     @Override
-    public void addReview(ReviewDto review) {
-        reviewRepository.save(ReviewDto.convertTo(review));
+    public ReviewDto addReview(ReviewDto reviewDto) {
+        return ReviewDto.convertFrom(reviewRepository.save(ReviewDto.convertTo(reviewDto)));
     }
 
     @Override

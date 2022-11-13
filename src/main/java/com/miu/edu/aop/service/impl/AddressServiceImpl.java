@@ -2,6 +2,7 @@ package com.miu.edu.aop.service.impl;
 
 import com.miu.edu.aop.annotation.ExecutionTime;
 import com.miu.edu.aop.dto.AddressDto;
+import com.miu.edu.aop.entity.Address;
 import com.miu.edu.aop.entity.User;
 import com.miu.edu.aop.repository.AddressRepository;
 import com.miu.edu.aop.repository.UserRepository;
@@ -28,8 +29,13 @@ public class AddressServiceImpl implements AddressService {
 
     @Override
     @ExecutionTime
-    public AddressDto getAddressById(int id) {
-        return AddressDto.convertFrom(addressRepository.findById(id).orElse(null));
+    public AddressDto getAddressDtoById(int id) {
+        return AddressDto.convertFrom(this.getAddressById(id));
+    }
+
+    @Override
+    public Address getAddressById(int id) {
+        return addressRepository.findById(id).orElse(null);
     }
 
     @Override
@@ -39,8 +45,8 @@ public class AddressServiceImpl implements AddressService {
     }
 
     @Override
-    public void updateAddress(AddressDto address) {
-        addressRepository.findById(address.getId()).ifPresent(a -> {
+    public void updateAddress(int id, AddressDto address) {
+        addressRepository.findById(id).ifPresent(a -> {
             a.setCity(address.getCity());
             a.setStreet(address.getStreet());
             a.setZip(address.getZip());
@@ -50,8 +56,8 @@ public class AddressServiceImpl implements AddressService {
     }
 
     @Override
-    public void addAddress(AddressDto address) {
-        addressRepository.save(AddressDto.convertTo(address));
+    public AddressDto addAddress(AddressDto addressDto) {
+        return AddressDto.convertFrom(addressRepository.save(AddressDto.convertTo(addressDto)));
     }
 
     @Override

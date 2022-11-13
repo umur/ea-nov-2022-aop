@@ -33,15 +33,16 @@ public interface ProductService {
 
     /**
      * Update a product
+     * @param id
      * @param product
      */
-    void updateProduct(ProductDto product);
+    void updateProduct(int id, ProductDto product);
 
     /**
      * Add a product
      * @param product
      */
-    void addProduct(ProductDto product);
+    ProductDto addProduct(ProductDto product);
 
     /**
      * Remove a product by id
@@ -60,4 +61,6 @@ public interface ProductService {
      * @param maxPrice
      */
     List<ProductDto> findProductsByCategoryIdAndPriceLessThanEqual(int id, Double maxPrice);
+
+    List<ProductDto> findProductByPriceGreaterThanEqualAndNameContainingIgnoreCase(Double price, String name);
 }

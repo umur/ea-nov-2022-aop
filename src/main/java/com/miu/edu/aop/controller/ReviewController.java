@@ -24,14 +24,14 @@ public class ReviewController {
         return reviewService.getReviewById(id);
     }
 
-    @PutMapping
-    public void updateReview(@RequestBody ReviewDto review) {
-        reviewService.updateReview(review);
+    @PutMapping("/{id}")
+    public void updateReview(@PathVariable int id, @RequestBody ReviewDto review) {
+        reviewService.updateReview(id, review);
     }
 
     @PostMapping
-    public void addReview(@RequestBody ReviewDto review) {
-        reviewService.addReview(review);
+    public ReviewDto addReview(@RequestBody ReviewDto review) {
+        return reviewService.addReview(review);
     }
 
     @DeleteMapping("/{id}")

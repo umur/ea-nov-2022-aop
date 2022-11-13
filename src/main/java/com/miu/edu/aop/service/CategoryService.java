@@ -22,15 +22,16 @@ public interface CategoryService {
 
     /**
      * Update a Category
+     * @param id
      * @param category
      */
-    void updateCategory(CategoryDto category);
+    void updateCategory(int id, CategoryDto category);
 
     /**
      * Add a Category
      * @param category
      */
-    void addCategory(CategoryDto category);
+    CategoryDto addCategory(CategoryDto category);
 
     /**
      * Remove a Category by id

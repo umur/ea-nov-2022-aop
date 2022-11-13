@@ -21,22 +21,22 @@ public class AddressController {
 
     @GetMapping("/{id}")
     public AddressDto getById(@PathVariable int id) {
-        return addressService.getAddressById(id);
+        return addressService.getAddressDtoById(id);
     }
 
     @GetMapping("/user/{id}")
     public AddressDto getAddressByUserId(@PathVariable int id) {
-        return addressService.getAddressById(id);
+        return addressService.getAddressDtoById(id);
     }
 
-    @PutMapping
-    public void updateAddress(@RequestBody AddressDto address) {
-        addressService.updateAddress(address);
+    @PutMapping("/{id}")
+    public void updateAddress(@PathVariable int id, @RequestBody AddressDto address) {
+        addressService.updateAddress(id, address);
     }
 
     @PostMapping
-    public void addAddress(@RequestBody AddressDto address) {
-        addressService.addAddress(address);
+    public AddressDto addAddress(@RequestBody AddressDto address) {
+        return addressService.addAddress(address);
     }
 
     @DeleteMapping("/{id}")

@@ -19,4 +19,6 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
 
     List<Product> findProductsByCategory_IdAndPriceLessThanEqual(int id, Double maxPrice);
 
+    List<Product> findProductByPriceGreaterThanEqualAndNameContainingIgnoreCase(Double price, String name);
+
 }

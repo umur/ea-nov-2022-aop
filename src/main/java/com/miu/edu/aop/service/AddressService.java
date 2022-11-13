@@ -1,6 +1,7 @@
 package com.miu.edu.aop.service;
 
 import com.miu.edu.aop.dto.AddressDto;
+import com.miu.edu.aop.entity.Address;
 
 import java.util.List;
 
@@ -15,9 +16,16 @@ public interface AddressService {
     /**
      * Get Address by id
      * @param id
+     * @return AddressDto
+     */
+    AddressDto getAddressDtoById(int id);
+
+    /**
+     * Get Address by id
+     * @param id
      * @return address
      */
-    AddressDto getAddressById(int id);
+    Address getAddressById(int id);
 
     /**
      * Get Address by userId
@@ -28,15 +36,16 @@ public interface AddressService {
 
     /**
      * Update an address
+     * @param id
      * @param address
      */
-    void updateAddress(AddressDto address);
+    void updateAddress(int id, AddressDto address);
 
     /**
      * Add an address
      * @param address
      */
-    void addAddress(AddressDto address);
+    AddressDto addAddress(AddressDto address);
 
     /**
      * Remove an address by id
