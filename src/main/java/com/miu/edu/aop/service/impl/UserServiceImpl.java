@@ -39,8 +39,8 @@ public class UserServiceImpl implements UserService {
         return this.getUserById(id).getAddress();
     }
     @Override
-    public void updateUser(UserDto user) {
-        userRepository.findById(user.getId()).ifPresent(u -> {
+    public void updateUser(int id, UserDto user) {
+        userRepository.findById(id).ifPresent(u -> {
             u.setFirstName(user.getFirstName());
             u.setLastname(user.getLastname());
             u.setPassword(user.getPassword());

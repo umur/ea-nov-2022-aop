@@ -171,6 +171,43 @@
 						"description": ""
 					},
 					"response": []
+				},
+				{
+					"name": "Get Product By Id copy",
+					"request": {
+						"url": {
+							"raw": "http://localhost:8080/products/filter?min-price=1400&name=M1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "min-price",
+									"value": "1400",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "name",
+									"value": "M1",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
 				}
 			]
 		},
@@ -444,7 +481,7 @@
 				{
 					"name": "Update user",
 					"request": {
-						"url": "http://localhost:8080/users",
+						"url": "http://localhost:8080/users/1",
 						"method": "PUT",
 						"header": [
 							{
@@ -480,7 +517,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"abcd@gmail.com\",\n    \"password\": \"123\",\n    \"firstName\": \"Ba Luan\",\n    \"lastname\": \"Tran\"\n}"
+							"raw": "{\n    \"email\": \"ba.tran@gmail.com\",\n    \"password\": \"123\",\n    \"firstName\": \"Ba Luan\",\n    \"lastname\": \"Tran\",\n    \"address\": {\n        \"id\":3\n    }\n}"
 						},
 						"description": ""
 					},
@@ -491,6 +528,17 @@
 					"request": {
 						"url": "http://localhost:8080/users/1",
 						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Address by user id",
+					"request": {
+						"url": "http://localhost:8080/users/1/address",
+						"method": "GET",
 						"header": [],
 						"body": {},
 						"description": ""

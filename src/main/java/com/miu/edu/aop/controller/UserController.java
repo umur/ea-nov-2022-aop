@@ -31,7 +31,7 @@ public class UserController {
     }
     @PutMapping("/{id}")
     public void updateUser(@PathVariable int id, @RequestBody UserDto user) {
-        userService.updateUser(user);
+        userService.updateUser(id, user);
     }
 
     @PostMapping

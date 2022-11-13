@@ -31,9 +31,10 @@ public interface UserService {
 
     /**
      * Update a User
+     * param id
      * @param user
      */
-    void updateUser(UserDto user);
+    void updateUser(int id, UserDto user);
 
     /**
      * Add a User
